@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			@keyframes title
+			{
+			from {color: palevioletred;font-size:18px;left:0}
+			to {color: yellowgreen;font-size:40px;left:45%;transform: rotate(360deg)}
+			}
+			@keyframes hover
+			{
+			from {transform: rotate(0deg)}
+			to {transform: rotate(360deg)}
+			}
+			.title{
+				position:fixed;
+				padding: 10px;
+				animation: title 3s;
+				color: yellowgreen;
+				font-size:40px;
+				left:45%;
+				/*text-align: center;*/
+				/*left: 50%;
+    			transform: translateX(-50%);*/
+			}
+			.title:hover{
+				animation: hover 3s;
+			}
+			
+			.box{
+				width:800px;
+				margin: auto;
+				position: fixed;
+			    left: 50%;
+			    top: 50%;
+			    transform: translate(-50%,-50%);
+				display:flex;
+				flex-direction:row;  /*flex-direction: row | row-reverse | column | column-reverse;  该属性决定项目的排序方向*/
+				flex-wrap: nowrap;  /*flex-wrap: nowrap | wrap | wrap-reverse; 一条主线排不下的情况下  可以换行*/
+				/*flex-flow: <flex-direction> || <flex-wrap>;  flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。*/
+				justify-content:center;  /*justify-content: flex-start | flex-end | center | space-between | space-around; 项目在主轴上的对齐方式*/
+				align-items:center;  /*align-items: flex-start | flex-end | center | baseline | stretch; 高度不等的项目在交叉轴上的对齐方式*/
+				/*align-content: flex-start | flex-end | center | space-between | space-around | stretch; 多根轴线对齐方式,如果只有一条轴线,该属性则不起作用*/
+			}
+			.box>div{
+				width:16.6%;
+				/*height:200px;*/
+				display:flex;
+				justify-content: center;
+				align-items:center;
+			}
+			.box>div:hover{
+				box-shadow:2px 2px 20px #989797;
+				animation: hover 3s;
+				/*background: radial-gradient(#fff, blue);*/
+			}
+			.div1{
+				background-color: #f9d1aa;
+				height:100px;
+			}
+			.div2{
+				background-color: #f1c7f1;
+				height:200px;
+			}
+			.div3{
+				background-color: #bcf1f1;
+				height:300px;
+			}
+			.div4{
+				background-color: #f1aac1;
+				height:400px;
+			}
+			.div5{
+				background-color: #f9d7d2;
+				height:500px;
+			}
+			.div6{
+				background-color: #b4baf9;
+				height:600px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="title">flex布局</h1>
+		<div class="box">
+			<div class="div1">项目1</div>
+			<div class="div2">项目2</div>
+			<div class="div3">项目3</div>
+			<div class="div4">项目4</div>
+			<div class="div5">项目5</div>
+			<div class="div6">项目6</div>
+		</div>
+	</body>
+</html>
